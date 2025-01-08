@@ -17,7 +17,6 @@
     --black1-color: #000000;
     --font-color: #838080;
     --golden-color: #fcae1e;
-    /* --golden-color: #FFA500; */
     --white-color: #FFFFFF;
     --pink-color: #fc6a03;
 
@@ -66,11 +65,11 @@ body {
 
 @keyframes changepng {
     0% {
-        background-image: url(photo/s05.jpg);
+        background-image: url(photo/s04.jpg);
     }
 
     25% {
-        background-image: url(photo/s04.webp);
+        background-image: url(photo/s03.webp);
     }
 
     50% {
@@ -82,7 +81,7 @@ body {
     }
 
     100% {
-        background-image: url(photo/s05.jpg);
+        background-image: url(photo/s04.jpg);
     }
 }
 
@@ -224,7 +223,6 @@ header.sticky #nav ul li a:hover {
 }
 
 .menu-icon {
-    /* display: none; */
     cursor: pointer;
 }
 
@@ -243,11 +241,12 @@ header.sticky #nav ul li a:hover {
     height: 240px;
     width: 0px;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
     padding: 2rem;
+    background-color: var(--pink-color);
     border-radius: 10px;
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 20;
 }
 
 .dropdown-menu.active {
@@ -276,7 +275,6 @@ header.sticky #nav ul li a:hover {
 
 #welcome {
     margin-top: 5rem;
-    /* background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(photo/b2.jpg); */
     background-position: center;
     background-size: cover;
 }
@@ -651,6 +649,17 @@ header.sticky #nav ul li a:hover {
     height: 100%;
 }
 
+#image #btn{
+    font-size: 2rem;
+    padding: 0.2rem 2rem;
+    border-radius: 30px;
+    background-color: var(--golden-color);
+    position: relative;
+    transform: -50% ,-50%;
+    left: 45%;
+    cursor: pointer;
+}
+
 /* Testimonials / clients speak */
 
 #client-speak {
@@ -783,6 +792,8 @@ header.sticky #nav ul li a:hover {
     display: flex;
     padding: 0.3rem;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 #footer .list li a {
@@ -862,10 +873,60 @@ header.sticky #nav ul li a:hover {
         cursor: pointer;
         color: var(--pink-color);
     }
+
+    .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu.active {
+        width: 40%;
+    }
+
+    .dropdown-menu li {
+        padding: 1.4rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 35%;
+    }
+
+    .dropdown-menu li a {
+        font-size: 2rem;
+        color: var(--white-color);
+    }
 }
 
 
 @media (max-width: 480px) {
+    #nav ul #ola1 {
+        display: none;
+    }
+
+    #nav ul #ola {
+        display: none;
+    }
+
+    .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu.active {
+        width: 100%;
+    }
+
+    .dropdown-menu li {
+        padding: 1.4rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 35%;
+    }
+
+    .dropdown-menu li a {
+        font-size: 2rem;
+        color: var(--white-color);
+    }
+
     .png .content h1 {
         font-size: 5rem;
     }
@@ -898,31 +959,36 @@ header.sticky #nav ul li a:hover {
     }
 
     #welcome h1 {
-        font-size: 4rem;
-        padding: 2.5rem;
+        font-size: 3.7rem;
+        padding: 2.5rem 0rem;
     }
 
     #welcome h1::after {
-        width: 36rem;
+        width: 30rem;
     }
 
     #welcome .wel-div {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        grid-auto-rows: 270px;
+        grid-auto-rows: 320px;
         gap: 0rem;
         padding: 3rem 1.8rem;
     }
 
-    #welcome .wel-div .info {
-        font-size: 2rem;
+    #welcome .wel-div .info span {
+        font-size: 2.7rem;
     }
 
+    #welcome .wel-div .info {
+        font-size: 1.6rem;
+    }
+
+
     #welcome .wel-div .info span {
-        font-size: 5.1rem;
+        font-size: 4.5rem;
     }
 
     #welcome .wel-div .img img {
-        width: 200px;
+        width: 160px;
     }
 
     #welcome .wel-div .img .img1 {
@@ -931,7 +997,7 @@ header.sticky #nav ul li a:hover {
 
     #welcome .wel-div .img .img2 {
         top: 310px;
-        left: 240px;
+        left: 200px;
     }
 
     #welcome .wel-div .img .img2::before {
@@ -940,135 +1006,129 @@ header.sticky #nav ul li a:hover {
 
     #service {
         margin-top: 4rem;
-        padding: 0 2rem;
     }
 
     #service h1 {
-        font-size: 4rem;
+        font-size: 3.7rem;
+        padding: 4rem 0rem;
     }
 
     #service h1::after {
-        width: 38rem;
+        width: 30rem;
+    }
+
+    #service .all-service .info {
+        padding: 0.8rem;
+        font-size: 1.4rem;
+    }
+
+    #service .all-service h2 {
+        font-size: 1.8rem;
+        margin: 3.4rem 0 1rem 0;
     }
 
     #service .Service-tank {
-        gap: 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        grid-auto-rows: 400px;
-    }
-
-    #service .all-service {
-        box-shadow: 0 0 0 0 #FFFFFF;
+        gap: 0.2rem;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-auto-rows: 420px;
     }
 
     #values h1 {
-        font-size: 4rem;
+        font-size: 3.7rem;
+        padding: 1rem 0rem;
     }
 
     #values h1::after {
-        width: 29rem;
+        width: 24rem;
     }
 
     #values .arrow {
-        margin: 2rem 12rem;
-        padding: 0 1rem;
+        margin: 2rem 8rem;
     }
 
     #values .arrow .left {
-        top: 28rem;
+        top: 20rem;
+        font-size: 5rem;
     }
 
     #values .arrow .right {
-        top: -26.6rem;
+        top: -19rem;
+        font-size: 5rem;
     }
 
     .arrow .left {
-        left: 34%;
+        left: 25%;
     }
 
     .arrow .right {
-        right: -152%;
+        right: -154%;
+    }
+
+    #values .all-values {
+        width: 220px;
+        padding: 2rem;
+        height: 300px;
+        margin: 0 2%;
     }
 
     #values .value-tank {
         display: grid;
         grid-auto-flow: column;
-        grid-auto-columns: calc((100% / 1) - 6.4rem);
-        gap: 4.6rem;
+        grid-auto-columns: calc((100% / 1) - 1rem);
+        gap: 2rem;
         scroll-behavior: smooth;
         overflow: hidden;
-        padding: 0 0.5rem;
-    }
-
-    #values .all-values {
-        width: 260px;
-        padding: 2rem;
-        height: 330px;
-        margin: 0 6%;
     }
 
     #values .all-values .img {
-        padding: 2rem;
-        font-size: 10rem;
+        font-size: 6rem;
     }
 
     #values .all-values h2 {
-        padding: 1rem;
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
-    #values .all-values:hover {
-        box-shadow: 0 0 1rem 0 #000000;
-        scale: 1;
-        border-radius: 3rem 3rem;
+    #values .all-values p {
+        font-size: 1.2rem;
+        padding: 1rem;
     }
 
     #image h1 {
-        font-size: 4rem;
+        font-size: 3.7rem;
     }
 
     #image h1::after {
         width: 14rem;
     }
 
-    #client-speak {
-        margin: 5rem 3rem;
-    }
-
     .client-slider .content {
-        padding: 0 5rem;
+        padding: 0 1rem;
     }
 
     .client-slider .content img {
-        width: 30px;
+        width: 25px;
     }
 
     .client-slider .content h3 {
-        font-size: 2rem;
-    }
-
-    .client-slider .content h6 {
-        font-size: 2rem;
-    }
-
-    .client-slider .content p {
-        font-size: 1rem;
-    }
-
-    .client-slider .content span {
         font-size: 1.5rem;
     }
 
-    #footer .footer-slide {
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        grid-template-rows: 100px;
-        gap: 3rem;
-        padding: 4rem;
+    .client-slider .content h6 {
+        font-size: 1rem;
     }
 
-    #footer .footer-logo img{
-        width: 18rem;
+    .client-slider .content p {
+        font-size: 0.9rem;
     }
+
+    #footer .footer-slide {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-rows: 110px;
+        gap: 1rem;
+        padding: 3rem;
+    }
+
     #footer .footer-icon i {
         font-size: 4rem;
     }
@@ -1076,19 +1136,19 @@ header.sticky #nav ul li a:hover {
     #footer .list h1,
     .address h1,
     .footer-icon h1 {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     #footer .footer-slide p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     #footer .list li a {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     #footer #copy {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -1124,24 +1184,29 @@ header.sticky #nav ul li a:hover {
     }
 
     #welcome h1 {
-        font-size: 4rem;
-        padding: 2.5rem;
+        font-size: 3.7rem;
+        padding: 2.5rem 0rem;
     }
 
     #welcome h1::after {
-        width: 36rem;
+        width: 30rem;
     }
 
     #welcome .wel-div {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        grid-auto-rows: 270px;
+        grid-auto-rows: 320px;
         gap: 0rem;
         padding: 3rem 1.8rem;
     }
 
-    #welcome .wel-div .info {
-        font-size: 2rem;
+    #welcome .wel-div .info span {
+        font-size: 2.7rem;
     }
+
+    #welcome .wel-div .info {
+        font-size: 1.6rem;
+    }
+
 
     #welcome .wel-div .info span {
         font-size: 4.5rem;
@@ -1166,98 +1231,96 @@ header.sticky #nav ul li a:hover {
 
     #service {
         margin-top: 4rem;
-        padding: 0 2rem;
     }
 
     #service h1 {
-        font-size: 4rem;
+        font-size: 3.7rem;
+        padding: 4rem 0rem;
     }
 
     #service h1::after {
-        width: 38rem;
-    }
-
-    #service .all-service h2 {
-        font-size: 2.8rem;
-        padding: 1.6rem;
+        width: 30rem;
     }
 
     #service .all-service .info {
-        font-size: 2rem;
+        padding: 0.8rem;
+        font-size: 1.4rem;
+    }
+
+    #service .all-service h2 {
+        font-size: 1.8rem;
+        margin: 3.4rem 0 1rem 0;
     }
 
     #service .Service-tank {
-        gap: 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        grid-auto-rows: 400px;
-    }
-
-    #service .all-service {
-        box-shadow: 0 0 0 0 #FFFFFF;
+        gap: 0.2rem;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-auto-rows: 420px;
     }
 
     #values h1 {
-        font-size: 4rem;
+        font-size: 3.7rem;
+        padding: 1rem 0rem;
     }
 
     #values h1::after {
-        width: 29rem;
+        width: 24rem;
     }
 
     #values .arrow {
-        margin: 2rem 8.8rem 2rem 8.8rem;
+        margin: 2rem 8rem;
     }
 
     #values .arrow .left {
-        top: 28rem;
+        top: 20rem;
+        font-size: 5rem;
     }
 
     #values .arrow .right {
-        top: -26.6rem;
+        top: -19rem;
+        font-size: 5rem;
     }
 
     .arrow .left {
-        left: 34%;
+        left: 25%;
     }
 
     .arrow .right {
-        right: -152%;
+        right: -154%;
+    }
+
+    #values .all-values {
+        width: 220px;
+        height: 300px;
+        margin: 0 6%;
     }
 
     #values .value-tank {
         display: grid;
         grid-auto-flow: column;
-        grid-auto-columns: calc((100% / 1) - 5rem);
-        gap: 3.8rem;
+        grid-auto-columns: calc((100% / 1) - 1rem);
+        gap: 0rem;
         scroll-behavior: smooth;
         overflow: hidden;
-    }
-
-    #values .all-values {
-        width: 260px;
-        padding: 2rem;
-        height: 330px;
-        margin: 0 6%;
+        padding: 0rem;
     }
 
     #values .all-values .img {
-        padding: 2rem;
-        font-size: 10rem;
+        font-size: 6rem;
     }
 
     #values .all-values h2 {
-        padding: 1rem;
-        font-size: 3rem;
+        font-size: 2rem;
+        padding: 0.6rem;
     }
 
-    #values .all-values:hover {
-        box-shadow: 0 0 1rem 0 #000000;
-        scale: 1;
-        border-radius: 3rem 3rem;
+    #values .all-values p {
+        font-size: 1.2rem;
+        padding: 0.2rem;
     }
 
     #image h1 {
-        font-size: 4rem;
+        font-size: 3.7rem;
     }
 
     #image h1::after {
@@ -1265,38 +1328,27 @@ header.sticky #nav ul li a:hover {
     }
 
     #client-speak {
-        margin: 5rem 3rem;
+        margin: 6rem 2rem;
     }
 
     .client-slider .content {
-        padding: 0 5rem;
+        padding: 0 1rem;
     }
 
     .client-slider .content img {
-        width: 30px;
+        width: 25px;
     }
 
     .client-slider .content h3 {
-        font-size: 2rem;
-    }
-
-    .client-slider .content h6 {
-        font-size: 2rem;
-    }
-
-    .client-slider .content p {
-        font-size: 1rem;
-    }
-
-    .client-slider .content span {
         font-size: 1.5rem;
     }
 
-    #footer .footer-slide {
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        grid-template-rows: 100px;
-        gap: 3rem;
-        padding: 4rem;
+    .client-slider .content h6 {
+        font-size: 1rem;
+    }
+
+    .client-slider .content p {
+        font-size: 0.9rem;
     }
 
     #footer .footer-icon i {
@@ -1306,180 +1358,29 @@ header.sticky #nav ul li a:hover {
     #footer .list h1,
     .address h1,
     .footer-icon h1 {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     #footer .footer-slide p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     #footer .list li a {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     #footer #copy {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
 
 @media (max-width: 415px) {
     #welcome .wel-div .info span {
-        font-size: 4.3rem;
-    }
-
-    #service .all-service {
-        box-shadow: 0 0 0 0 #FFFFFF;
-    }
-
-    #values .arrow {
-        margin: 2rem 8rem;
-    }
-
-    #values .value-tank {
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: calc((100% / 1) - 2.8rem);
-        gap: 2rem;
-        scroll-behavior: smooth;
-        overflow: hidden;
-    }
-
-    #values .all-values {
-        margin: 0 5%;
-    }
-}
-
-@media (max-width: 394px) {
-    #welcome .wel-div .info span {
-        font-size: 4rem;
-    }
-
-    #service h1 {
-        font-size: 3.6rem;
-    }
-
-    #service h1::after {
-        width: 34rem;
-    }
-
-    #service .Service-tank {
-        gap: 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        grid-auto-rows: 410px;
-    }
-
-    #values .arrow {
-        margin: 2rem 7rem 2rem 7rem;
-    }
-
-    #values .value-tank {
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: calc((100% / 1) - 1rem);
-        gap: 1.6rem;
-        scroll-behavior: smooth;
-        overflow: hidden;
-    }
-
-    #values .all-values {
-        margin: 0 2%;
+        font-size: 7.4vw;
     }
 }
 
 @media (max-width: 376px) {
-    #welcome .wel-div .info span {
-        font-size: 1rem;
-    }
-
-    #service {
-        padding: 2rem;
-    }
-
-    #service h1 {
-        font-size: 3.3rem;
-    }
-
-    #service h1::after {
-        width: 30rem;
-    }
-
-    #service .Service-tank {
-        gap: 1px;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        grid-auto-rows: 430px;
-    }
-
-    #service .all-service h2 {
-        font-size: 2.8rem;
-        padding: 1.6rem;
-    }
-
-    #service .all-service .info {
-        font-size: 2rem;
-    }
-
-    #values .arrow {
-        margin: 2rem 5rem;
-        padding: 0 1rem;
-    }
-
-    #values .arrow .left {
-        top: 28rem;
-    }
-
-    #values .arrow .right {
-        top: -26.6rem;
-    }
-
-    .arrow .left {
-        left: 36%;
-    }
-
-    .arrow .right {
-        right: -148.6%;
-    }
-
-    #values .value-tank {
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: calc((100% / 1) - 4rem);
-        gap: 3rem;
-        scroll-behavior: smooth;
-        overflow: hidden;
-    }
-
-    #values .all-values {
-        margin: 0 5%;
-    }
-}
-
-@media (max-width: 360px) {
-    #nav ul #ola1 {
-        display: none;
-    }
-
-    #nav ul #ola {
-        display: none;
-    }
-
-    .dropdown-menu {
-        display: block;
-    }
-
-    .dropdown-menu.active {
-        width: 450px;
-    }
-    .dropdown-menu li {
-        padding: 0.6rem;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding-left: 30%;
-    }
-    .dropdown-menu li a{
-        font-size: 2rem;
-        color: var(--white-color);
-    }
     .png .content h1 {
         font-size: 4rem;
     }
@@ -1559,7 +1460,8 @@ header.sticky #nav ul li a:hover {
     }
 
     #values .arrow {
-        margin: 2rem 6rem;
+        margin: 2rem 7rem;
+        padding: 0rem  -25.6rem;
     }
 
     #values .arrow .left {
@@ -1591,7 +1493,7 @@ header.sticky #nav ul li a:hover {
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: calc((100% / 1) - 1rem);
-        gap: 2rem;
+        gap: 1rem;
         scroll-behavior: smooth;
         overflow: hidden;
     }
@@ -1602,11 +1504,12 @@ header.sticky #nav ul li a:hover {
 
     #values .all-values h2 {
         font-size: 2rem;
+        padding: 0.6rem;
     }
 
     #values .all-values p {
         font-size: 1.2rem;
-        padding: 1rem;
+        padding: 0.2rem;
     }
 
     #image h1 {
@@ -1615,6 +1518,10 @@ header.sticky #nav ul li a:hover {
 
     #image h1::after {
         width: 10rem;
+    }
+
+    #client-speak {
+        margin: 6rem 2rem;
     }
 
     .client-slider .content {
@@ -1636,6 +1543,7 @@ header.sticky #nav ul li a:hover {
     .client-slider .content p {
         font-size: 0.9rem;
     }
+
     #footer .footer-icon i {
         font-size: 4rem;
     }
@@ -1660,14 +1568,6 @@ header.sticky #nav ul li a:hover {
 }
 
 @media (max-width: 344px) {
-    #welcome h1 {
-        font-size: 1rem;
-        padding: 2.5rem;
-    }
-
-    #welcome h1::after {
-        width: 26rem;
-    }
 
     #welcome .wel-div .info span {
         font-size: 3.5rem;
@@ -1749,59 +1649,5 @@ header.sticky #nav ul li a:hover {
 
     #welcome .wel-div .info span {
         font-size: 3.3rem;
-    }
-
-    #service {
-        padding: 1rem;
-    }
-
-    #service h1 {
-        font-size: 2.8rem;
-    }
-
-    #service h1::after {
-        width: 26rem;
-    }
-
-    #service .Service-tank {
-        gap: 1px;
-        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-        grid-auto-rows: 400px;
-    }
-
-    #service .all-service .info {
-        padding: 1rem;
-        font-size: 1.9rem;
-    }
-
-    #values .arrow {
-        margin: 2rem 4rem 2rem 4rem;
-    }
-
-    #values .arrow .left {
-        font-size: 5.6rem;
-        top: 28rem;
-    }
-
-    #values .arrow .right {
-        top: -25.6rem;
-        font-size: 5.6rem;
-    }
-
-    .arrow .left {
-        left: 41%;
-    }
-
-    .arrow .right {
-        right: -144.6%;
-    }
-
-    #values .value-tank {
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: calc((100% / 1) - 7rem);
-        gap: 7rem;
-        scroll-behavior: smooth;
-        overflow: hidden;
     }
 }

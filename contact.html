@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marah Entertainment</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- header with slider -->
+    <section id="home">
+        <div class="png">
+            <header>
+                <div class="logo"><img src="photo/logo3.png" alt=""></div>
+                <nav id="nav">
+                    <ul>
+                        <li id="ola"><a href="http://127.0.0.1:5501/index.html">Home</a></li>
+                        <li id="ola1"><a href="http://127.0.0.1:5501/about.html">About</a></li>
+                        <li id="ola1"><a href="http://127.0.0.1:5501/service.html">Service<a></li>
+                        <li id="ola1"><a href="http://127.0.0.1:5501/gallery.html">Gallery</a></li>
+                        <li id="ola1"><a href="http://127.0.0.1:5501/contact.html">Contact</a></li>
+                        <li class="menu-icon">
+                            <i class="fa-solid fa-bars"></i>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="dropdown-menu">
+                <li><a href="http://127.0.0.1:5501/index.html">Home</a></li>
+                <li><a href="http://127.0.0.1:5501/about.html">About</a></li>
+                <li><a href="http://127.0.0.1:5501/service.html">Service<a></li>
+                <li><a href="http://127.0.0.1:5501/gallery.html">Gallery</a></li>
+                <li><a href="http://127.0.0.1:5501/contact.html">Contact</a></li>
+            </div>
+
+            <div class="content">
+                <h1>Contact us</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact  -->
+
+    <section id="contact">
+        <div class="contact-container">
+            <form action="https://api.web3forms.com/submit" class="contact-form" method="post">
+                <input type="hidden" name="access_key" value="80a5b468-58b7-42dd-96f9-f92ac6b1a3e1">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="Email" placeholder="Email" required>
+                <select id="inquiry" name="Event" required>
+                    <option value="">--Select an option--</option>
+                    <option value="Wedding">Wedding & pre-wedding </option>
+                    <option value="Musical-Nights">Musical Nights</option>
+                    <option value="Conferences">Conferences</option>
+                    <option value=" Corporate-Events"> Corporate Events</option>
+                    <option value=" Live-in-Concerts"> Live in Concerts</option>
+                    <option value=" Annual Get-Together"> Annual Get-Together</option>
+                    <option value="Award-Functions">Award Functions</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="number" id="number" name="Number" placeholder="Number" required>
+                <textarea name="message" rows="4" placeholder="Enter your message" id="message"></textarea>
+                <button type="submite">Book Now</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- footer  -->
+
+    <section id="footer">
+        <div class="footer-slide">
+            <div id="list" class="footer-logo">
+                <img src="photo/logo2.png" alt="">
+            </div>
+            <div id="list" class="list">
+                <h1>Marah Entertainment</h1>
+                <ul>
+                    <li><a href="">Home</a> </li>
+                    <li> <a href="">About</a> </li>
+                    <li><a href="">Gallery</a> </li>
+                    <li><a href="">Service</a> </li>
+                    <li><a href="">Contact</a> </li>
+                </ul>
+            </div>
+            <div id="list" class="address">
+                <h1>Phone No</h1>
+                <p>+91 9112325551 <br> +91 9112325553</p>
+                <h1>Email</h1>
+                <p>marahentertainment5@gmail.com</p>
+            </div>
+            <div id="list" class="footer-icon">
+                <h1>Media</h1>
+                <div class="i"> <a href="
+                        "><i class="fa-brands fa-instagram"></i></a> <br>
+                    <a href="
+                        "><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <p id="copy">Copyright &copy; 2024 All Right Reserve &hearts;</p>
+    </section>
+
+    <!-- javaScript -->
+    <script src="event.js"></script>
+</body>
+
+</html>
