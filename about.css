@@ -375,6 +375,14 @@ header.sticky #nav ul li a:hover {
 }
 
 @media (max-width:430px) {
+    
+    .dropdown-menu li {
+        padding: 0.6rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 30%;
+    }
 
     .png .content h1{
         font-size: 8rem;

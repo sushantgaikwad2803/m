@@ -149,11 +149,12 @@ header.sticky #nav ul li a:hover {
     height: 240px;
     width: 0px;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background-color: var(--pink-color);
     padding: 2rem;
     border-radius: 10px;
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 20;
 }
 
 .dropdown-menu.active {
@@ -466,9 +467,17 @@ header.sticky #nav ul li a:hover {
 }
 
 @media (max-width:430px) {
+    .dropdown-menu li {
+        padding: 0.6rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 30%;
+    }
     #service p {
-        font-size: 2rem;
+        font-size: 1.8rem;
         text-align: justify;
+        padding: 1rem 2.6rem;
     }
 
     #service .all-service .info {

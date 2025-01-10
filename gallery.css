@@ -395,6 +395,13 @@ header.sticky #nav ul li a:hover {
     .png .content h1{
         font-size: 8rem;
     }
+    .dropdown-menu li {
+        padding: 0.6rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 30%;
+    }
     #footer .footer-icon i {
         font-size: 4rem;
     }
