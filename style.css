@@ -736,6 +736,7 @@ header.sticky #nav ul li a:hover {
 .client-slider .content h6 {
     font-size: 2rem;
     text-align: center;
+    color: var(--golden-color);
 }
 
 .client-slider .content p {
